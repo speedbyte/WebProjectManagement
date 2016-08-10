@@ -1,0 +1,10 @@
+<?
+
+echo $_POST["firstname"];
+
+
+
+
+
+
+?>

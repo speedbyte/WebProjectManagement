@@ -1,0 +1,96 @@
+<html>
+
+<head>
+	<title>PiSense mit Quadrocopter</title>
+</head>
+
+<body>
+	<link rel="stylesheet" href="style.css">
+	<header>
+		<h1>PiSense mit Quadrocopter</h1>
+		<h3>Ziele</h3>
+	</header>
+	
+	<login>
+		<a href="login.html" title="login">login</a>
+	</login>
+	
+	<navigation>
+		<a href="ticket.html"><input type="submit" value="Ticket erstellen" ></a>
+		<br>
+		<a href="solveTicket.html"><input type="submit" value="Tickets bearbeiten" ></a>
+		<br><br>
+		
+		<a href="index.html" title="index"> Startseite </a>
+		<br><br>
+		<b>Arbeitsbereiche:</b> <br>
+		<a href="embedded.html" title="embedded">Embedded System</a><br>
+		<a href="gui.html" title="gui">GUI </a><br>
+		<a href="database.html" title="database">Database </a><br>
+		<a href="applikation.html" title="applikation">Applikation </a><br>
+		<a href="webentwicklung.html" title="webentwicklung">Webentwicklung </a><br>
+		<br>
+		
+		<b>sonstiges:</b><br>
+		<a href="ziele.html" title="Ziele">Ziele </a><br>
+		<a href="ideen.html" title="ideen">Ideen</a><br>
+		<a href="diskussionen.html" title="diskussionen">Diskussionen </a><br>
+		<a href="docs.html" title="docs">Docs </a><br>
+		<a href="todo.html" title="todo">ToDo </a>
+		
+		<br><br>
+		<b>n&aumlchstes Treffen: </b>10.08.2016
+		<br><br>
+		<b>wichtige Infos: </b> <br>
+		
+		-Posterinhalte sammeln
+		<p id="infos"></p>
+		
+		
+		<input type="text" name="info" id="info">
+		
+		<button onclick="myFunction()">Info hinzuf&uumlgen</button>
+
+		<script>
+		function myFunction() {
+		    document.getElementById("infos").innerHTML = "-" +document.getElementById("info").value;
+		}
+		</script>
+	</navigation>	
+
+		
+
+	
+	<content>
+		<b>Hauptziele:</b>
+		Das Ziel in diesem Jahr war untergliedert in drei Teilbereiche:<br>
+		1)Die Anpassung der Low Level Treiber des Quadrocopters, um Sensordaten in Echtzeit abrufen und auswerten zu k&oumlnnen.<br>
+		2)Der Entwicklung und Anbindung einer MySQL Datenbank zur Verwaltung der abgerufenen Sensordaten.<br>
+		3)Dem Entwurf und der Umsetzung einer grafischen Oberfl&aumlche zur Darstellung der Sensordaten.<br>
+	<br>
+		<b>Zus&aumltzliche Ziele:</b><br>
+		-Das automatische Landen des Quadrocopters<br>
+		-Implementierung einer Applikation<br>
+		
+		
+		<br><br>
+		<label for="ziel"><b>weitere Ziele: </b></label><br>
+		<input type="text" name="ziel">
+		
+		<label for="checkbox">Hauptziel </label>
+		<input type="checkbox" name="main">
+		
+		<label for="checkbox">Zusatzziel </label>
+		<input type="checkbox" name="zusatz"> 
+		<input type="submit" value="hinzuefuegen">
+		
+	</content>
+	
+	<footer>
+		&copy Uni T&uumlbingen - Sommersemester 2016 - Programmierprojekt
+	</footer>
+	
+	
+	
+</body>
+</html>

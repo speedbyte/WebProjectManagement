@@ -1,0 +1,39 @@
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: both;
+    text-align: center;
+}
+
+navigation {
+    float: left;
+    margin: 0;
+	width: 15%;
+	height: 110%;
+	background-color: grey;
+	overflow: hidden;
+}
+
+content {
+	float: right;
+	width: 85%;
+	background-color:white;
+	height: 100%;
+
+}
+
+login {
+	background-color:grey;
+	width: 3%;
+	float: right;
+	color: red;
+	clear: both;
+	padding: 1em;
+}
+
+img {
+  width: 60%; 
+  height: auto;
+}
+
