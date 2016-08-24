@@ -17,6 +17,6 @@ $problem = $_GET["problem"];
 echo $problem;
 echo "<br>";
 echo "<br>";
-echo '<a href="index.html"><input type="submit" value="zurück zur Startseite"> </a>';	
+echo '<a href="index.php"><input type="submit" value="zurück zur Startseite"> </a>';	
 	
 ?>

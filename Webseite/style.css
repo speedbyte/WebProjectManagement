@@ -10,7 +10,7 @@ navigation {
     float: left;
     margin: 0;
 	width: 15%;
-	height: 110%;
+	height: auto;
 	background-color: grey;
 	overflow: hidden;
 }
@@ -19,7 +19,7 @@ content {
 	float: right;
 	width: 85%;
 	background-color:white;
-	height: 100%;
+	height: auto;
 
 }
 
@@ -32,8 +32,5 @@ login {
 	padding: 1em;
 }
 
-img {
-  width: 60%; 
-  height: auto;
-}
+
 
