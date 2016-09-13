@@ -14,36 +14,27 @@
 	echo "1<br>";
 
 	//Zugriff auf Get-variablen
-	$loginname = $_GET['loginname'];
-	$password = $_GET['password'];
+	$info = $_GET['info'];
 
 	
-	//SQL abfrage vorbereiten
-	$sql = "SELECT id, firstname, lastname FROM `register` WHERE loginname = '$loginname' AND password = '$password'";
+	//Tabelle fuellen
+	$fill = "INSERT INTO info (info) 
+	VALUES ('$info')";
 	
 	//check ob Abfrage erfolgreich war
-	if (!$result = $mysqli->query($sql)) {
+	if (!$result = $mysqli->query($fill)) {
    	 echo "query abfrage failed.<br>";
 	}
+
+	//Test
+	echo "2<br>";	
+
 	
 
-	//check ob acc vorhanden
-	if ($result->num_rows === 0) {
-   		header('Location: loginArea.php');
-  	 	exit;
-	}else{
-		session_start();
-		$_SESSION['login'] = true;
 	header('Location: index.php');
-	}
-	
-
 
 	// The script will automatically free the result and close the MySQL
 	// connection when it exits, but let's just do it anyways
 	$result->free();
 	$mysqli->close();
-
- 
 ?>
-

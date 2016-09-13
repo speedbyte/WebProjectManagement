@@ -46,31 +46,129 @@
 		<b>sonstiges:</b><br>
 		<a href="architektur.php" title="architekur">Architektur </a><br>
 		<a href="todo.php" title="todo">ToDo </a><br>
-		<a href="team.php" title="Das Team">Das Team </a>
-		<br><br>
-		<b>n&aumlchstes Treffen: </b>24.08.2016
-		<br><br>
-		<b>wichtige Infos: </b> <br>
-		
-		-Posterinhalte sammeln <br>
-		-Praesentation erstellen
-		<p id="infos"></p>
-		
-	<?php 
+		<br>
+		<b>n&aumlchstes Treffen: </b> <br>
+
+
+<?php			
+//Verbindung aufbauen
+	$mysqli = new mysqli('127.0.0.1', 'root', 'dominik1234', 'dominik');
+	
+
+	//check ob Verbindungsaufbau erfolgreich war
+	if(!$mysqli->connect_errno){
+	}
+	else {
+		echo "Verbindung konnte nicht aufgebaut werden. <br>";
+	}
+
+
+	//SQL abfrage vorbereiten
+	$sql = "SELECT * FROM time";
+	
+	//check ob Abfrage erfolgreich war
+	if (!$result = $mysqli->query($sql)) {
+   	 echo "query abfrage failed.<br>";
+	}
+
+
+	//check ob info vorhanden
+	if ($result->num_rows === 0) {
+   		echo "kein neuen Termin vorhanden";
+	}else{
+		while($actor = $result->fetch_assoc()){
+		echo "-" .$actor['time'];
+	
+	if (isset($_SESSION['login'])){
+	echo '<a href="timedelete.php/?time=' . $actor['time'] . '"' . 'title="delete">[x] </a>' . '<br>';
+	}
+
+
+
+
+		}
+	}
+
+
 	session_start();
 
 	if (isset($_SESSION['login'])){
+		echo '<form action="timechange.php" method="GET">';
+		echo '<input type="text" name="termin">';
+		echo '<input type="submit" value="Termin hinzufuegen">';
+		echo '</form>';
+	}
+	
 
-		echo '<input type="text" name="info" id="info">';
-		
-		echo '<button onclick="myFunction()">Info hinzuf&uumlgen</button>';
+	
 
-		echo '<script>';
-		echo 'function myFunction() {
-		    document.getElementById("infos").innerHTML = "-" +document.getElementById("info").value;
-		}';
-		echo '</script>';
-	}	
 	?>
+
+
+
+
+
+		<br><br>
+		<b>wichtige Infos: </b> <br>
+		
+	
+
+<?php			
+//Verbindung aufbauen
+	$mysqli = new mysqli('127.0.0.1', 'root', 'dominik1234', 'dominik');
+	
+
+	//check ob Verbindungsaufbau erfolgreich war
+	if(!$mysqli->connect_errno){
+	}
+	else {
+		echo "Verbindung konnte nicht aufgebaut werden. <br>";
+	}
+
+
+	//SQL abfrage vorbereiten
+	$sql = "SELECT * FROM info";
+	
+	//check ob Abfrage erfolgreich war
+	if (!$result = $mysqli->query($sql)) {
+   	 echo "query abfrage failed.<br>";
+	}
+
+
+	//check ob info vorhanden
+	if ($result->num_rows === 0) {
+   		echo "keine neuen Infos";
+	}else{
+		while($actor = $result->fetch_assoc()){
+	echo "-" .$actor['info'];
+
+	if (isset($_SESSION['login'])){
+	echo '<a href="delete.php/?info=' . $actor['info'] . '"' . 'title="delete">[x] </a>' . '<br>';
+	}
+	else{
+	echo '<br>';	
+	}
+	}
+	}
+
+
+	session_start();
+
+	if (isset($_SESSION['login'])){
+		echo '<form action="info.php" method="GET">';
+		echo '<input type="text" name="info">';
+		echo '<input type="submit" value="Info hinzufuegen">';
+		echo '</form>';
+	}
+	
+	?>
+
+	
+		
+		
+	
+
+
+
 	</navigation>
 </body>

@@ -14,22 +14,22 @@
 		<form action="register.php" method="GET">
 	
 			<label for="firstname"> firstname</label>
-			<input type="text" name="firstname" id="firstname">
+			<input type="text" name="firstname" id="firstname" required>
 		
 			<br>
 		
 			<label for="lastname"> lastname</label>
-			<input type="text" name="lastname" id="lastname">
+			<input type="text" name="lastname" id="lastname" required>
 			
 			<br>
 		
 			<label for="loginname"> loginname</label>
-			<input type="text" name="loginname" id="loginname">
+			<input type="text" name="loginname" id="loginname" required>
 	
 			<br>
 			
 			<label for="password"> password</label>
-			<input type="password" name="password" id="password">
+			<input type="password" name="password" id="password" required>
 
 			<br>
 

@@ -14,28 +14,19 @@
 	echo "1<br>";
 
 	//Zugriff auf Get-variablen
-	$loginname = $_GET['loginname'];
-	$password = $_GET['password'];
+	$aufgabe = $_GET['aufgabe'];
+	$bereich = $_GET['bereich'];
 
-	
-	//SQL abfrage vorbereiten
-	$sql = "SELECT id, firstname, lastname FROM `register` WHERE loginname = '$loginname' AND password = '$password'";
+	//Tabelle fuellen
+	$fill = "INSERT INTO todo (aufgabe, bereich) 
+	VALUES ('$aufgabe', '$bereich')";
 	
 	//check ob Abfrage erfolgreich war
-	if (!$result = $mysqli->query($sql)) {
+	if (!$result = $mysqli->query($fill)) {
    	 echo "query abfrage failed.<br>";
 	}
-	
 
-	//check ob acc vorhanden
-	if ($result->num_rows === 0) {
-   		header('Location: loginArea.php');
-  	 	exit;
-	}else{
-		session_start();
-		$_SESSION['login'] = true;
-	header('Location: index.php');
-	}
+	header('Location: http://localhost/new/todo.php');
 	
 
 
@@ -44,6 +35,8 @@
 	$result->free();
 	$mysqli->close();
 
- 
-?>
 
+
+
+
+?>

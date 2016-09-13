@@ -10,26 +10,88 @@
 <body>
 	<content>
 	
-	<p> <b>Folgende Tickets wurden erstellt:</b></p>
+<?php
+	echo '<p> <b>Folgende Tickets wurden erstellt:</b></p>';
+	
+	
+	//Verbindung aufbauen
+	$mysqli = new mysqli('127.0.0.1', 'root', 'dominik1234', 'dominik');
+	
+	//check ob Verbindungsaufbau erfolgreich war
+	if(!$mysqli->connect_errno){
+		
+	}
+	else {
+		echo "Verbindung nicht aufgebaut1 <br>";
+	}
+
+	
+
+
+	//SQL abfrage vorbereiten
+	$sql = "SELECT * FROM ticket2";
+	
+	//check ob Abfrage erfolgreich war
+	if (!$result = $mysqli->query($sql)) {
+   	 echo "query abfrage failed.<br>";
+	}
+
+
+	//check ob info vorhanden
+	if ($result->num_rows === 0) {
+   		echo "keine aktuellen Tickets";
+	}else{
+		while($actor = $result->fetch_assoc()){
+		
+	echo '<b>Ticketersteller:</b> <br>';	
 	
 	
 	
-	<form action="solveTicket.php" method="GET">	
-		<label for="username">Username Ticketersteller: </label>
-		<input type="text" name="usernameTicketersteller" value="TODO: name aus db laden"><br>
-		<label for="username">Username Ticketbearbeiter: </label>
-		<input type="text" name="usernameTicketbearbeiter"><br><br>
-		<label for="problem">Problem: </label><br>
-		<textarea cols="35" rows="4" name="problem">
-		TODO: problem aus db laden
-		</textarea><br>
-		<br>
-		<label for="loesung">L&oumlsung: </label><br>
-		<textarea cols="35" rows="4" name="loesung">
-		L&oumlsungsvorschlag bitte eintragen!
-		</textarea><br><br>
-		<input type="submit" value="Ticket beantworten">
-	</form>
+	echo '<form action="solveTicket.php" method="GET">';
+
+
+	echo '<label for="Vorname">Vorname: </label>';
+	echo '<input type="text" name="firstnameTicketersteller" id="firstnameTicketersteller" value="' .$actor['firstnameTicketersteller'] . '"<br><br>';
+	echo '<label for="Nachname">Nachname: </label>';
+	echo '<input type="text" name="lastnameTicketersteller" id="lastnameTicketersteller"value="' .$actor['lastnameTicketersteller'] . '"<br><br>';
+
+	echo '<label for="username">Username: </label>';
+	echo '<input type="text" name="usernameTicketersteller" id="usernameTicketersteller"value="' .$actor['usernameTicketersteller'] . '"<br><br><br>';
+
+	echo '<b>Ticketbearbeiter:</b> <br>';	
+
+	echo '<label for="Vorname">Vorname: </label>';
+	echo '<input type="text" name="firstnameTicketbearbeiter" id="firstnameTicketbearbeiter" value="' .$actor['firstnameTicketbearbeiter'] . '"<br><br>';
+	echo '<label for="Nachname">Nachname: </label>';
+	echo '<input type="text" name="lastnameTicketbearbeiter" id="lastnameTicketbearbeiter"value="' .$actor['lastnameTicketbearbeiter'] . '"<br><br>';
+
+	echo '<label for="username">Username: </label>';
+	echo '<input type="text" name="usernameTicketbearbeiter" id="usernameTicketbearbeiter" value="' .$actor['usernameTicketbearbeiter'] . '"<br><br>';
+	
+		
+
+	echo 'Folgendes Problem liegt vor:<br>';
+	echo '<textarea cols="35" rows="4" name="Problem1" id="Problem1">';
+	echo $actor['problem'];
+	echo '</textarea><br>';
+
+
+	
+	echo '<label for="loesung">Loesung: </label><br> <textarea cols="35" rows="4" name="Loesung" id="Loesung">';
+	echo $actor['loesung'];
+	echo '</textarea><br><br>';
+	echo '<input type="submit" value="Ticket bearbeiten">';
+
+	echo '<a href="logout.php" title="logout"><input type="submit" value="Ticket loeschen"></a>'; 
+
+	echo '<br><br><br><br>';
+	echo '</form>';
+
+
+
+	}
+	}
+?>
 		
 	</content>
 
