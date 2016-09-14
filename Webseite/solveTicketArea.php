@@ -1,6 +1,14 @@
 <!doctype html>
 <head>
 	<header>
+
+<embed width="100px" height="100px" data="marcel.png" src="marcel.png"> </embed>
+<embed width="100px" height="100px" data="phil.png" src="phil.png"> </embed>
+<embed width="100px" height="100px" data="jascha.png" src="jascha.png"> </embed>
+<embed width="100px" height="100px" data="chris.png" src="chris.png"> </embed>
+<embed width="100px" height="100px" data="domi.png" src="domi.png"> </embed>
+<embed width="100px" height="100px" data="vikas.png" src="vikas.png"> </embed>
+
 		<h1>PiSense mit Quadrocopter</h1>
 		<h3>Ticketsystem</h3>
 	</header>
@@ -79,10 +87,9 @@
 	
 	echo '<label for="loesung">Loesung: </label><br> <textarea cols="35" rows="4" name="Loesung" id="Loesung">';
 	echo $actor['loesung'];
-	echo '</textarea><br><br>';
+	echo '</textarea><br>';
 	echo '<input type="submit" value="Ticket bearbeiten">';
 
-	echo '<a href="logout.php" title="logout"><input type="submit" value="Ticket loeschen"></a>'; 
 
 	echo '<br><br><br><br>';
 	echo '</form>';

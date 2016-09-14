@@ -1,6 +1,14 @@
 <!doctype html>
 <head>
 	<header>
+
+<embed width="100px" height="100px" data="marcel.png" src="marcel.png"> </embed>
+<embed width="100px" height="100px" data="phil.png" src="phil.png"> </embed>
+<embed width="100px" height="100px" data="jascha.png" src="jascha.png"> </embed>
+<embed width="100px" height="100px" data="chris.png" src="chris.png"> </embed>
+<embed width="100px" height="100px" data="domi.png" src="domi.png"> </embed>
+<embed width="100px" height="100px" data="vikas.png" src="vikas.png"> </embed>
+
 		<h1>PiSense mit Quadrocopter</h1>
 			<h3>Arbeitsbereich Embedded System</h3>
 			<h3>Vikas Agrawal</h3>
@@ -36,7 +44,7 @@
 			<input type="submit" value="register">
 		</form>
 	
-		<a href="login.html" title="Noch kein Account? Hier klicken zum registrieren!"> Schon ein Account? Klicke hier um dich <b>anzumelden! </a>
+		<a href="loginArea.php" title="Noch kein Account? Hier klicken zum registrieren!"> Schon ein Account? Klicke hier um dich <b>anzumelden! </a>
 		
 <?php include ("footer.php"); ?>
 </body>

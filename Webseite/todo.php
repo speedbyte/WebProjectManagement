@@ -1,6 +1,14 @@
 <!doctype html>
 <head>
 	<header>
+
+<embed width="100px" height="100px" data="marcel.png" src="marcel.png"> </embed>
+<embed width="100px" height="100px" data="phil.png" src="phil.png"> </embed>
+<embed width="100px" height="100px" data="jascha.png" src="jascha.png"> </embed>
+<embed width="100px" height="100px" data="chris.png" src="chris.png"> </embed>
+<embed width="100px" height="100px" data="domi.png" src="domi.png"> </embed>
+<embed width="100px" height="100px" data="vikas.png" src="vikas.png"> </embed>
+
 		<h1>PiSense mit Quadrocopter</h1>
 		<h3>Todo</h3>
 	</header>
@@ -9,7 +17,7 @@
 
 <body>
 	<content>
-	<h2><center> Folgende Aufgaben sind zu erledigen: </center> </h2><br><br>
+	<h2><center> Folgende Aufgaben waren zu erledigen: </center> </h2><br><br>
 
 
 <?php			
@@ -41,12 +49,12 @@
    		echo "keine neuen Aufgaben vorhanden";
 	}else{
 		while($actor = $result->fetch_assoc()){
-	echo '<input type="checkbox" name="check1" id="check1">'  . $actor['aufgabe']; 
+	echo '-'  . $actor['aufgabe']; 
 		
 	session_start();
 	if (isset($_SESSION['login'])){
 		
-		echo '<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[delete] </a>' . "<br>";
+		echo '<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[x] </a>' . "<br>";
 	}
 	else {
 	echo '<br>';
@@ -74,11 +82,11 @@
    		echo "keine Aufgaben vorhanden";
 	}else{
 		while($actor = $result->fetch_assoc()){
-	echo '<input type="checkbox" name="check1" id="check1">'  . $actor['aufgabe']; 
+	echo '-'  . $actor['aufgabe']; 
 		
 	session_start();
 	if (isset($_SESSION['login'])){
-		echo '<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[delete] </a>' . "<br>";
+		echo '<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[x] </a>' . "<br>";
 	}
 	else {
 	echo '<br>';
@@ -107,11 +115,11 @@
    		echo "keine Aufgaben vorhanden";
 	}else{
 		while($actor = $result->fetch_assoc()){
-	echo '<input type="checkbox" name="check1" id="check1">'  . $actor['aufgabe'];
+		echo '-'  . $actor['aufgabe']; 
 		
 	session_start();
 	if (isset($_SESSION['login'])){
-		echo'<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[delete] </a>' . "<br>";
+		echo'<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[x] </a>' . "<br>";
 	}
 	else {
 	echo '<br>';
@@ -139,11 +147,11 @@
    		echo "keine Aufgaben vorhanden";
 	}else{
 		while($actor = $result->fetch_assoc()){
-	echo '<input type="checkbox" name="check1" id="check1">'  . $actor['aufgabe'];
+		echo '-'  . $actor['aufgabe']; 
 		
 	session_start();
 	if (isset($_SESSION['login'])){
-		echo'<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[delete] </a>' . "<br>";
+		echo'<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[x] </a>' . "<br>";
 	}
 	else {
 	echo '<br>';
@@ -170,11 +178,11 @@
    		echo "keine Aufgaben vorhanden";
 	}else{
 		while($actor = $result->fetch_assoc()){
-	echo '<input type="checkbox" name="check1" id="check1">'  . $actor['aufgabe'];
+	echo '-'  . $actor['aufgabe'];
 		
 	session_start();
 	if (isset($_SESSION['login'])){
-		echo'<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[delete] </a>' . "<br>";
+		echo'<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[x] </a>' . "<br>";
 	}
 	else {
 	echo '<br>';
@@ -202,11 +210,11 @@
    		echo "keine Aufgaben vorhanden";
 	}else{
 		while($actor = $result->fetch_assoc()){
-	echo '<input type="checkbox" name="check1" id="check1">'  . $actor['aufgabe'] .' (Aufgabenbereich: ' . $actor['bereich'] .')' ; 
+	echo '-'  . $actor['aufgabe'] .' (Aufgabenbereich: ' . $actor['bereich'] .')' ; 
 		
 	session_start();
 	if (isset($_SESSION['login'])){
-		echo'<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[delete] </a>' . "<br>";
+		echo'<a href="removeaufgabe.php/?aufgabe='.$actor['aufgabe'] .'&'. 'bereich=' . $actor['bereich'] .'"'. 'title="delete">[x] </a>' . "<br>";
 	}
 	else {
 	echo '<br>';
@@ -241,6 +249,15 @@
 	}
 	
 	?>
+
+
+
+
+
+
+
+
+
 
 <!--
 

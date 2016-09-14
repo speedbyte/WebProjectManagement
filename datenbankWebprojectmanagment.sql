@@ -140,9 +140,6 @@ CREATE TABLE `ticket2` (
   `loesung` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `ticket2` (`firstnameTicketersteller`, `lastnameTicketersteller`, `usernameTicketersteller`, `problem`, `firstnameTicketbearbeiter`, `lastnameTicketbearbeiter`, `usernameTicketbearbeiter`, `loesung`) VALUES
-('Dominik',	'Heinrich',	'admin123',	'Checkboxes in Datenbank geben -> Ampelanzeige -> Todo',	'Domi',	'Heino',	'admin1234',	'google'),
-('Vikas',	'A',	'VA',	'Bsp',	'Dominik',	'Heinrich',	'dom123',	'google');
 
 DROP TABLE IF EXISTS `time`;
 CREATE TABLE `time` (
@@ -150,8 +147,7 @@ CREATE TABLE `time` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `time` (`time`) VALUES
-('31.09.2016'),
-('<b> 22.09.2016 -11Uhr </b>');
+('31.09.2016');
 
 DROP TABLE IF EXISTS `todo`;
 CREATE TABLE `todo` (
@@ -161,24 +157,44 @@ CREATE TABLE `todo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `todo` (`aufgabe`, `bereich`, `time`) VALUES
-('CMS implementieren',	'Webprojectmanagment',	'2016-09-13 12:02:01'),
 ('App fertig stellen',	'Applikation',	'2016-09-13 12:02:33'),
 ('Praesentation',	'Alle',	'2016-09-13 12:03:44'),
-('ticket delete funktion schreiben',	'Webprojectmanagment',	'2016-09-13 12:13:08'),
-('Alle Sachen in Git laden',	'Webprojectmanagment',	'2016-09-13 12:18:36'),
 ('Daten an Vikas geben fuer Webseite',	'Webprojectmanagment',	'2016-09-13 12:18:49'),
 ('Powerpointpart erstellen',	'GUI',	'2016-09-13 12:19:18'),
 ('Powerpointpart erstellen',	'Datenbank',	'2016-09-13 12:19:27'),
 ('Powerpointpart erstellen',	'Webprojectmanagment',	'2016-09-13 12:19:34'),
 ('Powerpointpart erstellen',	'Applikation',	'2016-09-13 12:19:42'),
-('Ampel hinzufuegen',	'Webprojectmanagment',	'2016-09-13 12:24:48'),
 ('bei keinem Datenempfang soll signal bei 0 weiterlaufen',	'GUI',	'2016-09-13 12:38:14'),
 ('Poster aufhaengen',	'Alle',	'2016-09-13 12:50:09'),
-('Haken soll angezeigt bleiben',	'Webprojectmanagment',	'2016-09-13 12:57:31'),
 ('Alle Aufgaben hier einfuegen',	'Webprojectmanagment',	'2016-09-13 12:57:44'),
 ('Foto in Kopfzeile einfuegen und hervorheben',	'Webprojectmanagment',	'2016-09-13 12:58:01'),
 ('Foto senden an Dominik',	'Alle',	'2016-09-13 12:59:00'),
-('Javadoc erstellen',	'GUI',	'2016-09-13 13:08:47');
+('Javadoc erstellen',	'GUI',	'2016-09-13 13:08:47'),
+('alles ins Git laden',	'Applikation',	'2016-09-13 13:37:57'),
+('Doc schreiben',	'Applikation',	'2016-09-13 13:38:07'),
+('Timestamp korrektur',	'GUI',	'2016-09-13 13:47:05'),
+('Architektur Bild aktualisieren',	'Webprojectmanagment',	'2016-09-13 18:17:33'),
+('Doc schreiben',	'Webprojectmanagment',	'2016-09-13 18:18:06'),
+('Version management mit Git',	'Alle',	'2016-09-13 18:39:13'),
+('Architektur Bild auf Praesentation aktualisieren',	'Webprojectmanagment',	'2016-09-13 18:45:44'),
+('Raspberry Inbetriebnahme:',	'Embedded System',	'2016-09-13 18:50:01'),
+('Befehle von Christoph(App) wahrnehmen',	'Embedded System',	'2016-09-13 18:50:31'),
+('Motorsteurungfunktion Ã¼ber App von Christoph',	'Embedded System',	'2016-09-13 18:50:57'),
+('Daten an Jascha(DB) senden',	'Embedded System',	'2016-09-13 18:51:26'),
+('Organisation/Erstellung des Posters',	'Webprojectmanagment',	'2016-09-13 18:51:45'),
+('Organisation/Erstellung der Praesentation',	'Webprojectmanagment',	'2016-09-13 18:52:03'),
+('Login/Logout Bereich erstellen',	'Webprojectmanagment',	'2016-09-13 18:52:30'),
+('Bereich fuer naechstes Treffen erstellen',	'Webprojectmanagment',	'2016-09-13 18:52:49'),
+('Bereich fuer wichtige Infos erstellen',	'Webprojectmanagment',	'2016-09-13 18:53:01'),
+('Datenbank erstellen',	'Datenbank',	'2016-09-13 18:53:16'),
+('Daten von Pi entgegennehmen und fÃ¼r Philipp(GUI) bereitstellen',	'Datenbank',	'2016-09-13 18:54:19'),
+('Python Connector zu MySql',	'Datenbank',	'2016-09-13 18:54:33'),
+('Protokoll festlegen',	'Alle',	'2016-09-13 18:55:11'),
+('Architekturbild via Graphviz erstellen',	'Webprojectmanagment',	'2016-09-13 18:57:23'),
+('Daten sollen automatisch korrekt skalieren',	'GUI',	'2016-09-13 18:58:13'),
+('Sensordaten sollen korrekt angezeigt werden',	'GUI',	'2016-09-13 18:58:41'),
+('Code refactoring',	'GUI',	'2016-09-13 18:58:51'),
+('Appfunktion: On/Off, Demo, Test',	'Applikation',	'2016-09-14 10:58:56');
 
--- 2016-09-13 13:14:20
+-- 2016-09-14 12:11:35
 
