@@ -147,7 +147,7 @@ CREATE TABLE `time` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `time` (`time`) VALUES
-('31.09.2016');
+('21.09.2016');
 
 DROP TABLE IF EXISTS `todo`;
 CREATE TABLE `todo` (
@@ -196,5 +196,5 @@ INSERT INTO `todo` (`aufgabe`, `bereich`, `time`) VALUES
 ('Code refactoring',	'GUI',	'2016-09-13 18:58:51'),
 ('Appfunktion: On/Off, Demo, Test',	'Applikation',	'2016-09-14 10:58:56');
 
--- 2016-09-14 12:11:35
+-- 2016-09-14 12:40:58
 
